@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Compare Football Stats</title>
+  <link href="styles.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div id="page_wrapper">
+
+  </div>
+  <div id="header-bar">
+      <header><h1>Compare the stats that matter</h1></header>
+  </div>
+  <div id="main_content_area">
+    <div id="card-area">
+      <div id="cards" class="cards">
+        <div id="player1_card">
+          <button data-modal-target="#modal" id="add_player1" class="add_player_btn" value="1" >
+            <img src="img/Add_Player_Logo.jpg" class="add_player_logo" />
+          </button>
+        </div>
+        <div id="player2_card">
+          <button data-modal-target="#modal" id="add_player2" class="add_player_btn" value="2">
+            <img src="img/Add_Player_Logo.jpg" class="add_player_logo" />
+          </button>
+        </div>
+        <div id="edit_stats_div"></div>
+      </div>
+  
+      
+      <div class="modal" id="modal">
+          <div class="modal-header">
+            <h2 class="title">Add Players</h2>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div id="player_search">
+            
+              <div id="search_input_area">
+                <input id="player_search_bar" type="text" placeholder="Search for a player">
+                <input type="submit" value="Search" id="submit_player_search">
+              </div>
+              <div id="search_results_area">
+              </div>
+      
+            </div>
+          </div>
+      </div>
+      <div class="modal" id="edit_stats_modal">
+        <div class="modal-header">
+          <h2 class="title">Edit Stats</h2>
+          <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body" id="edit_stats_modal_body">
+          <p>Note: Some stats not not be avalible for a given season</p>
+          <div id="stats_list"></div>
+        </div>
+    </div>
+      <div id="overlay"></div>
+    </div>
+  
+    <div id="how-to-use">
+      <h2 id="how-to-sub-heading">How To Use:</h2>
+      <p>This site is designed to give answers to your hunches, settle pub debates and pre-match arguments about how Europe's best players stack up, the data doesn't lie!</p>
+  
+      <ol>
+          <li>Click the select players button and search for the two players you wish to compare</li><br>
+          <li>If thats statics you want are not listed click the add additonal stats button to the left of the player cards and check the boxes of any stats you want to compare</li><br>
+          <li>Solve the biggest debates in the game </li>
+      </ol>
+  </div>
+  </div>
+  
+</body>
+<script defer src="script.js"></script>
+</html>
