@@ -1,0 +1,330 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    background-color: #367D5B;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  body{
+    overflow-y: scroll;
+  }
+
+  #main_content_wrapper{
+    overflow-y: scroll;
+    display:flex;
+    flex-direction: row;
+  }
+
+  #page_wrapper{
+    overflow-y: scroll;
+    display:flex;
+    flex-direction: row;
+  }
+
+  /*
+  ##############################################################################################
+                          Styling main body
+  */
+#header-bar{
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+}
+
+#card-area{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    word-wrap: break-word;
+}
+
+.hide_button{
+  display: none;
+}
+.show_button{
+  display: block;
+}
+
+#how-to-use {
+    border: 3px dashed white;
+    padding: 2px;
+    margin: 2px;
+}
+#how-to-use p{
+  padding: 5px;
+}
+#how-to-sub-heading{
+    text-align: center;
+}
+
+/*
+  ##############################################################################################
+                          Internal styling for add players pop out modal 
+  */
+  #player_search{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    height: 50vh;
+    width: 100%;
+  }
+
+  #search_input_area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  #search_heading{
+    text-align: center;
+  }
+
+  #player_search_bar{
+    align-self: center;
+  }
+
+  .search_error{
+    text-align: center;
+  }
+
+
+  #search_results_area{
+    list-style: none;
+    padding-left: 0;
+    overflow-y: scroll;
+  }
+
+  .list_element{
+    border: 0.5px solid black;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .search_img{
+    width: 35px;
+    height: 35px;
+    padding-right: 7px;
+  }
+
+  #selected_players{
+    border: 1px solid white;
+    height: 40vh;
+    width: 30vw;
+    padding: 3px;
+  }
+
+  #compare_players{
+    width: 70px;
+    height: 60px;
+  }
+
+  .choose_player{
+    border-radius: 50%;
+    background-color: #367D5B;
+    color: white;
+    text-align: center;
+    padding-left: 10px;
+  }
+ /*
+  ##############################################################################################
+                            Pop out modal styling
+  */
+
+.add_players{
+  width: 100px;
+  height: 100px;
+}
+.add_player_btn{
+  box-shadow: none;
+  width: 100px;
+  height: 100px;
+  border: none;
+  background: none;
+  outline: none;
+  border-radius: 30%;
+  box-shadow: none;
+}
+
+.add_player_logo{
+    height:100px;
+    width: 100px;
+    border-radius: 30%;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  width: 35vw;
+  height: 55vh;
+  max-width: 80%;
+
+}
+::placeholder { 
+  color: white;
+  opacity: 0.4;
+}
+
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+ /*
+##############################################################################################
+                           cards styling
+*/
+
+.remove_player{
+  height: 70%;
+  width: 15%;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.player_card {
+  display: inline-block;
+  flex-basis: 0 0 35vw; 
+  border: 3px solid white;
+  height: 90%;
+  max-width: 100%;
+  border-radius: 12px;
+  padding: 2px 4px 50% 4px;
+}
+
+.player_card_image{
+  height: 70px;
+  width: 70px;
+}
+
+#cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: auto;
+  width: 70vw;
+}
+
+.l1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.season_list{
+  width: 90%;
+  height: 10%;
+  overflow-y: scroll;
+  font-size: 0.6rem;
+  border: 0.5px solid white;
+}
+.l3{
+  height: auto;
+}
+.stat{
+  display: flex;
+  flex-direction: column;
+}
+
+.stat_data{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.7rem;
+}
+
+.display_text{
+  padding-left: 15%;
+}
+
+.stats_label{
+  color: white;
+  font-size: 1.1em;
+}
+
+#edit_stats_modal_body{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 55vh;
+  width: 35vw;
+}
+
+.edit_stats_div {
+  border: 1px solid black;
+}
+
+.comparison_line{
+  width: 100%;
+  height: 3px;
+  border: 1px solid orange;
+  margin-right: 200px;
+}
+
+#edit_stats{
+  margin-top: 350px;
+  box-shadow: none;
+  width: 52px;
+  height: 52px;
+  border: 2px solid white;
+  border-radius: 30%;
+}
+.disabled{
+  text-decoration: line-through;
+}
