@@ -310,14 +310,14 @@ searchBtn.addEventListener('click', async ()=>{
   } else {
     document.getElementById('search_results_area').innerHTML = '';
     let playerData = await searchPlayer(searchInput.value, "name");
-
+    /*
     if(parseInt(playerData.data.length) === 0){
       let no_results_msg = document.createElement(`p`);
       no_results_msg.className = 'search_error'
       no_results_msg.textContent = 'We could not find anyone by that name :('
       document.getElementById('search_results_area').appendChild(no_results_msg);
     }
-
+    */
     const search_results = playerList(playerData.data);
     playerSearchArea.innerHTML = search_results;
 
