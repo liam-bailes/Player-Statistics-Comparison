@@ -542,7 +542,7 @@ async function generate_level_2(player, which_player){
   });
   let season_info = await getSeasons(season_ids);
   let default_season = find_default_season(player, season_info);
-  for(let i=0; i< season_ids.length; i++){
+  for(let i=0; i< season_info.length; i++){
 
     let option = document.createElement('option');
     if(i===0){
